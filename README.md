@@ -1,5 +1,8 @@
 # ColorGuard — fix the MECHREVO / AiStone Control Center colour-mode LUT bug
 
+> **中文用户请先看 [`使用说明.txt`](使用说明.txt)** —— 傻瓜式逐步操作说明（解压 → 解除锁定 → 捕获曲线 → 开启守护 → 常见问题）。
+
+
 A ~15 KB WinForms utility that keeps the display gamma ramp (LUT) in sync with the
 colour mode of MECHREVO's **Control Center** (AiStone `GamingCenter2`), because the
 Control Center itself stopped doing it in version **5.56.60.34**.
