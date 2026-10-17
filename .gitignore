@@ -1,0 +1,13 @@
+# build output
+bin/
+obj/
+
+# generated at runtime
+profile-default.ramp
+profile-srgb.ramp
+ColorGuard.log
+
+# VS / editor
+.vs/
+*.user
+*.suo
