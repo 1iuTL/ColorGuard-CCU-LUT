@@ -24,7 +24,7 @@ static class Nat
 
 static class Guard
 {
-    public static readonly ushort[] DEFAULT = BuildIdentity();   // no machine-specific data: capture your own curve at first run
+    public static readonly ushort[] DEFAULT = new ushort[] {0,0,257,257,514,771,771,1028,1028,1285,1542,1542,1799,2056,2313,2313,2570,2827,3084,3341,3598,3855,4112,4369,4626,4883,5140,5140,5397,5654,5911,6168,6425,6682,6939,7196,7453,7710,7967,7967,8224,8481,8738,8995,8995,9252,9509,9766,10023,10023,10280,10537,10794,11051,11051,11308,11565,11822,12079,12336,12336,12593,12850,13107,13364,13621,13878,13878,14135,14392,14649,14906,15163,15420,15677,15677,15934,16191,16448,16705,16962,17219,17476,17476,17733,17990,18247,18504,18761,19018,19275,19275,19532,19789,20046,20303,20560,20817,21074,21331,21588,21845,22102,22359,22616,22616,22873,23130,23387,23644,23901,24158,24415,24672,24929,25186,25186,25443,25700,25957,26214,26471,26728,26985,27242,27242,27499,27756,28013,28270,28527,28784,29041,29298,29555,29812,30069,30326,30583,30840,31097,31354,31611,31868,32125,32382,32639,32896,33153,33410,33667,33924,34181,34438,34695,34952,35209,35466,35723,35980,36237,36494,36751,37008,37265,37522,37779,38036,38293,38550,38807,39064,39321,39578,39835,40092,40349,40606,40863,41120,41377,41634,41891,42148,42405,42919,43176,43176,43433,43690,43947,44204,44461,44718,44975,45232,45489,45746,46003,46260,46517,46774,47031,47288,47545,47802,48059,48316,48573,48830,49087,49344,49601,49858,50115,50372,50629,50886,51143,51400,51657,51914,52171,52428,52685,52942,53199,53456,53713,54227,54484,54741,54998,55255,55512,55769,56026,56283,56540,56797,57054,57568,57825,58082,58339,58596,58853,59110,59367,59881,60138,60395,60652,60909,61166,61680,0,0,257,257,514,514,771,1028,1028,1285,1285,1542,1799,1799,2056,2313,2570,2570,2827,3084,3341,3598,4112,4369,4626,4883,5140,5397,5654,5911,6168,6168,6425,6682,6939,7196,7453,7710,7967,8224,8481,8481,8738,8995,9252,9252,9509,9766,10023,10280,10280,10537,10794,11051,11308,11308,11565,11822,12079,12336,12593,12593,12850,13107,13364,13621,13878,14135,14392,14392,14649,14906,15163,15420,15677,15934,16191,16448,16448,16705,16962,17219,17476,17733,17990,17990,18247,18504,18761,19018,19275,19532,19789,19789,20046,20303,20560,20817,21074,21331,21588,21845,22102,22359,22616,22873,23130,23387,23644,23901,23901,24158,24415,24672,24929,25186,25443,25700,25957,25957,26214,26471,26728,26985,27242,27499,27756,28013,28270,28527,28784,28784,29041,29298,29555,29812,30069,30326,30583,30840,31097,31354,31611,31868,32125,32382,32639,32896,33153,33410,33924,34181,34438,34695,34952,35209,35466,35723,35980,36237,36494,36751,37008,37265,37522,37779,38036,38293,38550,38807,39064,39321,39578,39835,40092,40349,40606,40863,41120,41377,41891,42148,42405,42662,42919,43176,43433,43690,43947,44204,44461,44718,44975,45232,45489,45746,46003,46260,46517,46774,47031,47288,47545,47802,48059,48316,48573,48830,49087,49344,49601,49858,50115,50372,50629,50886,51143,51400,51657,51914,52171,52428,52685,52942,53199,53456,53713,53970,54227,54484,54741,54998,55255,55769,56026,56283,56540,56797,57054,57311,57568,57825,58339,58596,58853,59110,59367,59624,59881,60395,60652,60909,61166,61423,61680,61937,0,0,257,257,514,514,771,1028,1028,1285,1542,1799,1799,2056,2313,2570,2827,3084,3341,3598,3855,4112,4369,4626,4883,5140,5397,5654,5911,6168,6425,6682,6939,7196,7453,7710,7967,8224,8481,8738,8995,9252,9509,9766,10023,10023,10280,10537,10794,11051,11308,11565,11565,11822,12079,12336,12593,12850,13107,13364,13621,13878,13878,14135,14392,14649,14906,15163,15420,15677,15934,16191,16448,16705,16962,16962,17219,17476,17733,17990,18247,18504,18761,19018,19275,19532,19789,20046,20303,20560,20817,21074,21331,21588,21845,22102,22359,22616,22873,23130,23387,23644,23644,23901,24158,24415,24672,24929,25186,25443,25700,25957,26214,26471,26728,26985,27242,27499,27756,28013,28270,28527,28784,29041,29298,29555,29812,30069,30326,30583,30840,31097,31354,31611,31868,32125,32382,32639,32896,33153,33667,33924,34181,34438,34695,34952,35209,35466,35723,35980,36237,36494,37008,37265,37522,37779,38036,38293,38550,38807,39064,39578,39835,40092,40349,40606,40863,41120,41377,41634,42148,42405,42662,42919,43176,43433,43690,43947,44204,44461,44718,44975,45232,45489,45746,46003,46260,46517,46774,47031,47545,47802,48059,48316,48573,48830,49087,49344,49601,49858,50115,50372,50629,50886,51143,51400,51657,51914,52171,52428,52942,53199,53456,53713,53970,54227,54484,54741,54998,55255,55512,55769,56026,56283,56797,57054,57311,57568,57825,58082,58339,58596,59110,59367,59624,59881,60138,60395,60909,61166,61423,61680,61937,62194,62451,62708,62965,63479,63736,63993,64250,64507,64764,65021,65278,65535};
     public static readonly ushort[] IDENTITY = BuildIdentity();
     public static ushort[] RampDefault;
     public static ushort[] RampSrgb;
@@ -96,7 +96,7 @@ static class Guard
     }
     public static string SourceText()
     {
-        return "曲线来源：原色域=" + (CapturedDefault ? "已捕获" : "未捕获(恒等)") + "，sRGB=" + (CapturedSrgb ? "已捕获" : "未捕获(恒等)");
+        return "曲线来源：原色域=" + (CapturedDefault ? "已捕获" : "内置") + "，sRGB=" + (CapturedSrgb ? "已捕获" : "内置恒等");
     }
     static string JoinNums(ushort[] a)
     {
@@ -104,14 +104,72 @@ static class Guard
         for (int i = 0; i < 768; i++) { if (i > 0) sb.Append(' '); sb.Append(a[i]); }
         return sb.ToString();
     }
+    public static string Backup(string path)
+    {
+        try
+        {
+            if (!File.Exists(path)) return "";
+            string b = path + ".bak-" + DateTime.Now.ToString("yyyyMMdd-HHmmss");
+            File.Copy(path, b, true);
+            return b;
+        }
+        catch { return ""; }
+    }
+    public static void SaveRamp(string path, ushort[] r)
+    {
+        Backup(path);
+        File.WriteAllText(path, JoinNums(r));
+    }
+    public static string RampState()
+    {
+        if (CapturedDefault && CapturedSrgb && Same(RampDefault, RampSrgb)) return "⚠ 两条曲线重合（疑似误捕获）";
+        if (!CapturedSrgb) return "sRGB = 内置恒等";
+        return "正常";
+    }
+    // 防呆自检：两条曲线重合 = 典型误捕获 → 自动把 sRGB 恢复为恒等
+    public static string SelfCheck()
+    {
+        if (CapturedDefault && CapturedSrgb && Same(RampDefault, RampSrgb))
+        {
+            string bak = Backup(ProfSrgbPath);
+            SaveRamp(ProfSrgbPath, IDENTITY);
+            RampSrgb = (ushort[])IDENTITY.Clone();
+            CapturedSrgb = true;
+            Log("self-check: sRGB profile identical to default (sum=" + Sum(RampDefault) + ") -> restored identity" + (bak.Length > 0 ? " (backup: " + Path.GetFileName(bak) + ")" : ""));
+            return "自检发现问题：profile-srgb.ramp 和 profile-default.ramp 两条曲线完全重合。\r\n这是典型的误捕获（在画面不正常时点了【捕获】）。\r\n\r\n已自动把 sRGB 曲线恢复为【恒等曲线】，旧文件已备份。";
+        }
+        return null;
+    }
     public static string CaptureCurrent()
     {
         string mode = ReadMode();
         if (mode != "sRGB" && mode != "原色域") return "无法捕获：当前控制中心档案未知";
         var cur = Current();
+
+        // 防呆 1：屏幕上还是"另一档"的曲线 → 直接拒绝
+        if (mode == "sRGB" && Same(cur, RampDefault))
+            return "已拒绝捕获：当前屏幕仍在使用【原色域】曲线（切换还没生效）。\r\n请等 1 秒或点【立即校正一次】，确认画面正常后再捕获。";
+        if (mode == "原色域" && CapturedSrgb && Same(cur, RampSrgb))
+            return "已拒绝捕获：当前屏幕仍在使用【sRGB】曲线。\r\n请先在控制中心切到原色域并确认画面正常，再捕获。";
+
+        // 防呆 2：sRGB 档曲线应接近恒等；偏离则要求二次确认
+        if (mode == "sRGB" && !Same(cur, IDENTITY))
+        {
+            var ans = MessageBox.Show(
+                "当前 sRGB 档的曲线偏离【恒等曲线】（总和 " + Sum(cur).ToString("N0") + "）。\r\n" +
+                "正常情况下 sRGB 档由系统按 ICC 校正，屏幕 LUT 应保持恒等。\r\n\r\n" +
+                "只有确认此刻画面确实正常，才点【确定】保存；否则请点【取消】。",
+                "ColorGuard 防呆检查", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (ans != DialogResult.OK)
+            {
+                Log("capture aborted by shield (sRGB ramp not identity, sum=" + Sum(cur) + ")");
+                return "已取消捕获（防呆检查未通过）";
+            }
+        }
+
         string path;
-        if (mode == "sRGB") { path = ProfSrgbPath; File.WriteAllText(path, JoinNums(cur)); RampSrgb = cur; CapturedSrgb = true; }
-        else { path = ProfDefaultPath; File.WriteAllText(path, JoinNums(cur)); RampDefault = cur; CapturedDefault = true; }
+        if (mode == "sRGB") { path = ProfSrgbPath; SaveRamp(path, cur); RampSrgb = cur; CapturedSrgb = true; }
+        else { path = ProfDefaultPath; SaveRamp(path, cur); RampDefault = cur; CapturedDefault = true; }
         Log("captured current ramp as " + mode + " -> " + path + " (sum=" + Sum(cur) + ")");
         return "已捕获" + mode + "曲线（总和 " + Sum(cur) + "）→ " + Path.GetFileName(path);
     }
@@ -179,7 +237,7 @@ class MainForm : Form
         Controls.Add(btnCap);
 
         lblHint = new Label();
-        lblHint.Text = "本程序不会自启动；点【开启守护】才生效。切换色域后到目标状态点【捕获当前曲线】，即可把该机曲线保存进 profile-default.ramp / profile-srgb.ramp（换机也能用）。";
+        lblHint.Text = "【防呆】捕获必须在“画面正常”时点：\r\n· 若屏幕还是另一档的曲线 → 程序直接拒绝捕获\r\n· sRGB 档捕获到非恒等曲线 → 弹窗二次确认\r\n· 启动时自检：两条曲线重合（误捕获特征）→ 自动恢复恒等并备份\r\n本程序不自启动；点【开启守护】才生效。";
         lblHint.SetBounds(14, 224, 460, 56);
         lblHint.ForeColor = Color.DimGray;
         Controls.Add(lblHint);
@@ -191,6 +249,12 @@ class MainForm : Form
             Guard.ProfDefaultPath = Path.Combine(ed, "profile-default.ramp");
             Guard.ProfSrgbPath = Path.Combine(ed, "profile-srgb.ramp");
             Guard.LoadProfiles();
+            string sc = Guard.SelfCheck();
+            if (sc != null)
+            {
+                Guard.LoadProfiles();
+                MessageBox.Show(sc, "ColorGuard 防呆自检", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             RefreshUi();
         };
         FormClosing += delegate { StopGuard(); };
@@ -240,7 +304,7 @@ class MainForm : Form
             lblState.ForeColor = running ? Color.SeaGreen : Color.DimGray;
             lblMode.Text = "控制中心当前档案：" + Guard.ReadMode();
             lblLut.Text = "显示器曲线总和：" + Guard.LutDesc();
-            lblProfiles.Text = Guard.SourceText();
+            lblProfiles.Text = Guard.SourceText() + "   ｜ 自检：" + Guard.RampState();
             btnOn.Enabled = !running; btnOff.Enabled = running;
         }
         catch { }
@@ -259,4 +323,3 @@ class Program
         Application.Run(new MainForm());
     }
 }
-

@@ -76,3 +76,17 @@ The Control Center writes the registry more than once per click (two notificatio
 500 ms apart) and Windows ACM applies its transform asynchronously; during that window the
 OS transform and the LUT briefly disagree, which shows up as a short flash
 (colour noise / warm tint). Measured with the tool disabled: the flash still occurs.
+
+---
+
+## 2026-10-18 复发与防呆（v1.1）
+
+**现象**：切换/捕获后画面再次变暗、出现彩噪。
+
+**定位**：ColorGuard.log 显示
+captured current ramp as sRGB -> profile-srgb.ramp (sum=22835221) ——
+用户在 sRGB 档、画面尚未正常时点【捕获】，把原色域曲线存成了 sRGB 的正确曲线。守护比对后认为"LUT 已正确"，于是不再纠正。
+
+**修复**：重写 profile-srgb.ramp 为恒等（总和 25,165,440）；错误文件备份为 profile-srgb.ramp.bad-20261018；手动写入恒等 LUT 后画面恢复。
+
+**防呆**：见 README 的 v1.1.0 更新记录（三道防线 + 自动备份）。
